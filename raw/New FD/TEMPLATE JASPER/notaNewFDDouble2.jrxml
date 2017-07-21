@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="notaNewFDDouble2" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8e7f89a9-aceb-4ceb-926f-b1564a63154d">
+	<property name="ireport.zoom" value="1.1000000000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Faridzi\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="retailerName" class="java.lang.String"/>
+	<parameter name="username" class="java.lang.String"/>
+	<parameter name="notaNumber" class="java.lang.String"/>
+	<parameter name="trxDate" class="java.lang.String"/>
+	<parameter name="cardNumber" class="java.lang.String"/>
+	<parameter name="trxMSISDN" class="java.lang.String"/>
+	<parameter name="retailerAddress" class="java.lang.String"/>
+	<parameter name="ownerMSISDN" class="java.lang.String"/>
+	<parameter name="ownerName" class="java.lang.String"/>
+	<parameter name="seMSISDN" class="java.lang.String"/>
+	<parameter name="totalItem" class="java.lang.Long"/>
+	<parameter name="begValue" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="endValue" class="java.lang.String"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="items" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="headerNote" class="java.lang.String"/>
+	<parameter name="productName" class="java.lang.String"/>
+	<parameter name="priceTotal" class="java.lang.Long"/>
+	<parameter name="initial" class="java.lang.Long"/>
+	<parameter name="required" class="java.lang.Long"/>
+	<parameter name="bonus" class="java.lang.Long"/>
+	<parameter name="isKrediTri" class="java.lang.String"/>
+	<parameter name="krediTriValue" class="java.lang.Long"/>
+	<parameter name="isKredit" class="java.lang.Integer"/>
+	<parameter name="virtualAccount" class="java.lang.String"/>
+	<parameter name="isGoldFd" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="410" width="148" height="20" uuid="b7a46bb2-c49e-4087-a124-17f8d0926886"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Awal DuiTri]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="581" width="555" height="87" uuid="8fb7cc36-a59f-4025-9bf3-876ee338c61c"/>
+				<textFieldExpression><![CDATA[$P{note}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="683" width="555" height="25" uuid="60c32f3c-ee8c-4e70-8d74-3b01fd530cc5"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3Karnaval ]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="148" y="410" width="100" height="20" uuid="1c336d1d-699b-4a5d-a0cf-1753df53d142"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{begValue}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="561" width="274" height="20" uuid="bc64c77d-40e2-448d-9d03-cfa7334eeb1f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[* Semua Transaksi adalah dalam DuiTri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="708" width="555" height="20" uuid="21506095-6e25-4f39-ad98-c924bd63445c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="450" width="148" height="20" uuid="b60f1410-fad7-4963-bb20-e5759c374f8e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Akhir DuiTri]]></text>
+			</staticText>
+			<textField pattern="">
+				<reportElement x="148" y="450" width="100" height="20" uuid="5dd0d5d0-7ab5-4812-86c2-ec21ae0adbfb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{endValue}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="148" y="430" width="100" height="20" uuid="882aaf15-1903-40ae-b3bc-7dc4641bb4ea"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="430" width="148" height="20" uuid="0d967b93-cebe-4415-9dbc-3cb541931911"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Belanja]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="325" width="232" height="20" uuid="4996f6fc-c90c-4a32-b6cd-07f1ed7f2bde"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{initial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="345" width="232" height="20" uuid="5f7f92f4-299f-408a-97fe-6ee4ea43ef0f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{required}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="325" width="323" height="20" uuid="98707e10-7089-459f-9c56-2ee2bd8ba8c5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deposit di Karnaval musim sekarang :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="345" width="323" height="20" uuid="6c80939c-d96d-48bd-af57-cecb00dffb4d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Target DuiTri untuk Karnaval musim berikutnya :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="365" width="232" height="20" uuid="fce948b7-3dcd-4d0a-8580-1e88b14c6493"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bonus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="365" width="323" height="20" uuid="cd32cfde-afee-4a5e-9983-c66685313d5a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bonus :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="274" width="323" height="20" uuid="6e0a64c6-bc4f-416e-ae8c-616f2c243efd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="323" y="254" width="232" height="20" uuid="ecf53c7f-652c-4578-8746-36ae0583d1c0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="274" width="232" height="20" uuid="79ea141e-6974-4acd-a048-017ff65c7485"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{priceTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="254" width="323" height="20" uuid="7f8d6be4-3af3-4c21-8620-999903d0f5fb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produk yang didepositkan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="145" width="106" height="20" uuid="2a7e67c6-6ee8-4b2c-8e27-db852e81dfe3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor Kartu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="185" width="106" height="20" uuid="7ea1a16d-1e07-4cbb-b87d-d4b8be633ae4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trx MSISDN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="185" width="100" height="20" uuid="259421cf-38a9-40a1-bde4-6022cb9a5454"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trxMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="106" width="141" height="35" uuid="15014e8e-18da-44fe-b49d-ae05f60b5dba"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{notaNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="205" width="217" height="20" uuid="7bca2f3f-3d00-4c3d-8a44-b7d02a9cc96d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{retailerAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="145" width="100" height="20" uuid="a7e0d661-f0c6-4dc6-bb01-b171cfd60cda"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{cardNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="165" width="100" height="20" uuid="f4b045dd-be1a-446d-99d2-117bfac25d66"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ownerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="205" width="100" height="20" uuid="68befacf-a487-4173-a99f-f48f23cf338a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{seMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="106" width="100" height="20" uuid="60f979d1-c6be-4786-9e7d-6589acd6beab"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{isKrediTri}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="165" width="106" height="20" uuid="ee646e60-c0c3-47a4-a8ec-c5e6a9815288"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Retailer]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="82" width="100" height="20" uuid="3dd514a2-b6c9-40f5-aa12-7c03cd2b6923"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{username}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="82" width="106" height="20" uuid="66780b2d-f46a-4fc7-b6d1-26c87fdd7820"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Kasir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="165" width="106" height="20" uuid="a73ff009-eb85-4d81-9a63-71a70499601f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="185" width="106" height="20" uuid="8381c011-f2ed-4316-9898-69c62682c275"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="115" width="106" height="20" uuid="dd7f63a1-6cf2-4b15-b7f3-a8b7a988b883"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Nota]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="62" width="100" height="20" uuid="784f12a5-6d08-4390-9e10-b62d7b7e7cfd"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trxDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="205" width="106" height="20" uuid="dee545da-87ff-4ef5-b241-5139cdf7e795"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Retailer]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="185" width="100" height="20" uuid="abd4c256-e65e-4ad2-9894-b7576da3ced3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ownerMSISDN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="62" width="106" height="20" uuid="6c08bf60-2433-40f6-b4b8-963894591da8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="106" width="106" height="20" uuid="f6f923df-a7ab-4591-b8de-488cbca993ab"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KrediTri]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="165" width="100" height="20" uuid="05772b8c-1491-4f54-9b86-adb048d2cdd8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{retailerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="205" width="106" height="20" uuid="1b50cc6b-beac-41f3-9b05-9be8e3ec5346"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SE MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="555" height="26" uuid="43abb186-83ad-4cc5-98af-a35e65039225"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Nota DeposiTri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="25" uuid="040fc555-11c5-4fbf-bf79-410b72995cd6"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3Karnaval ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="145" width="100" height="20" uuid="be8c93af-6ae3-4092-a591-20b488206b96">
+					<printWhenExpression><![CDATA[$P{isGoldFd} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{virtualAccount} == null ? "-" : $P{virtualAccount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="145" width="106" height="20" uuid="ba1f84d8-e0a9-4816-996f-b410df95413a">
+					<printWhenExpression><![CDATA[$P{isGoldFd} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Code]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

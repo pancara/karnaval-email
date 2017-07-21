@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="notaTransferSub_sender" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2eea1e49-afc9-4ab8-a760-4d9486c84f03">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="227"/>
+	<parameter name="trxDate" class="java.lang.String"/>
+	<parameter name="notaNumber" class="java.lang.String"/>
+	<parameter name="username" class="java.lang.String"/>
+	<parameter name="headerBottom" class="java.lang.String"/>
+	<parameter name="senderCardCode" class="java.lang.String"/>
+	<parameter name="senderName" class="java.lang.String"/>
+	<parameter name="senderTrxMSISDN" class="java.lang.String"/>
+	<parameter name="senderAddress" class="java.lang.String"/>
+	<parameter name="senderOwner" class="java.lang.String"/>
+	<parameter name="senderOwnerMSISDN" class="java.lang.String"/>
+	<parameter name="senderSEMSISDN" class="java.lang.String"/>
+	<parameter name="receiverCardCode" class="java.lang.String"/>
+	<parameter name="receiverName" class="java.lang.String"/>
+	<parameter name="receiverTrxMSISDN" class="java.lang.String"/>
+	<parameter name="receiverAddress" class="java.lang.String"/>
+	<parameter name="receiverOwner" class="java.lang.String"/>
+	<parameter name="receiverOwnerMSISDN" class="java.lang.String"/>
+	<parameter name="receiverSEMSISDN" class="java.lang.String"/>
+	<parameter name="begBalanceSender" class="java.lang.Long"/>
+	<parameter name="amountSender" class="java.lang.Long"/>
+	<parameter name="endBalanceSender" class="java.lang.Long"/>
+	<parameter name="headerUp" class="java.lang.String"/>
+	<parameter name="headerNote" class="java.lang.String"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="noteBottomsender" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="740" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="25" uuid="523eeb31-de82-4e66-914e-c8fa19f36a67"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3Karnaval ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="71" width="106" height="20" uuid="8180661a-b9ff-467f-9155-30c5d6c0ae23"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Kasir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="555" height="26" uuid="3a011c96-0dcd-4be4-ae40-549c69d17f2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Nota Transfer Saldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="51" width="106" height="20" uuid="812fdd0a-b436-45d9-8863-74beb8248c72"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="106" height="20" uuid="90641dc3-2caf-49a4-8915-ddcc4fa0e550"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Nota]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="51" width="100" height="20" uuid="8bf7469f-416a-448d-b1c8-f9679d2dbd51"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trxDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="95" width="189" height="29" uuid="7731377e-f691-492e-83b7-ffcfb529685b"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{notaNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="71" width="100" height="20" uuid="c83904be-0bf0-43bf-983a-db9fba13c317"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="145" width="151" height="31" uuid="adb7efce-a248-4359-808a-827f558a772a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerBottom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="199" width="217" height="20" uuid="c0ac9526-cdb2-4bc4-b2e7-422be417cc08"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="219" width="126" height="20" uuid="cb00bb42-343d-4216-8a2e-b55c63fc742d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderOwnerMSISDN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="199" width="106" height="20" uuid="f0bf1641-df54-4203-8b11-3933372fe928"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Retailer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="219" width="106" height="20" uuid="58a6b8e4-c611-4033-925b-4c5f28ffa427"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trx MSISDN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="219" width="217" height="20" uuid="c3425d2a-fe08-4dd5-b0ea-890440d7cd94"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderTrxMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="179" width="217" height="20" uuid="25d1d677-2aa2-4fcf-8db8-b33ac6bb11ad"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderCardCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="199" width="106" height="20" uuid="d4ff4cbf-08ac-4c30-b316-15e4dc4f8b95"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="219" width="106" height="20" uuid="e25af7d8-e19d-4303-b2fb-5b1bf9d62d97"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="239" width="106" height="20" uuid="86f798ee-c9d9-4651-9e16-90712acbe912"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SE MSISDN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="239" width="217" height="20" uuid="9b1705de-32fc-4361-9bb7-c6ef10788501"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="199" width="126" height="20" uuid="2e992ddb-c771-47b7-a841-ffecc0967f26"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderOwner}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="239" width="126" height="20" uuid="c99fb27d-69e4-4156-8f93-e79b220c75ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{senderSEMSISDN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="179" width="106" height="20" uuid="911fb1b5-d97e-46a6-9175-8f324c266b45"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor Kartu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="239" width="106" height="20" uuid="7208f15e-5082-4099-8e80-42a06e71ebaa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Retailer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="314" width="191" height="20" uuid="85ae54c4-e3a3-4074-83a3-37fced74e760"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah yang Ditransfer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="334" width="191" height="20" uuid="9bea1600-aa3d-4d04-9e6d-9c4f540b1e78"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Akhir DuiTri]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="191" y="294" width="238" height="20" uuid="b0231e5a-9f18-4d4c-9008-a7e43c42fff4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{begBalanceSender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="314" width="238" height="20" uuid="bcc679ce-b251-47b7-b3e5-1b2ba216fa7c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amountSender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="294" width="191" height="20" uuid="2337f466-4907-4464-b391-03b28ba36899"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Awal DuiTri]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="191" y="334" width="238" height="20" uuid="2e2a107e-9371-4cf8-8e3d-f82788d5f920"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endBalanceSender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="464" width="106" height="20" uuid="19a9f873-4236-4b02-9a78-cb019cde4ee9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner MSISDN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="444" width="126" height="20" uuid="5793c9b0-64bb-4120-8350-2bdd13e1177f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverOwner}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="444" width="217" height="20" uuid="7dde78e9-1edf-4cb7-a241-c28208854c3b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="484" width="217" height="20" uuid="1f659d04-baec-4789-97b5-5e778a115bb4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="464" width="217" height="20" uuid="fd50288f-d557-48b9-be32-0c963845aa89"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverTrxMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="464" width="126" height="20" uuid="3736c00d-94bb-45f9-96af-742ac1f9aa71"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverOwnerMSISDN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="444" width="106" height="20" uuid="21779523-f118-4da7-8aca-a0b2979a9165"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="424" width="106" height="20" uuid="d3cb722a-3638-4f63-afa8-6cddcf2d5d95"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor Kartu]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="395" width="323" height="29" uuid="4f15db88-6dbb-4b6f-a279-a463d69b822e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerUp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="424" width="217" height="20" uuid="86c91df4-6a1f-4922-991f-96f0033e5d29"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverCardCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="323" y="484" width="106" height="20" uuid="76f9c3e9-317c-40d3-abd8-e55d4127cd2b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SE MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="464" width="106" height="20" uuid="7674b364-fd92-401e-b4b3-767192cd11ae"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trx MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="484" width="106" height="20" uuid="e2da7580-886d-468a-88dd-7954075f27d4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Retailer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="444" width="106" height="20" uuid="6832cda8-06ea-4235-8184-fa1c0623e9ee"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Retailer]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="484" width="126" height="20" uuid="dbacc8bb-4eb4-4efe-9c9e-7555dbdabc6a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{receiverSEMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="527" width="555" height="15" uuid="79852e5f-5581-4d1d-af9c-82b000865658"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerNote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="542" width="555" height="58" uuid="ba3c7578-18a7-4fc0-bf1f-3f3239609f2a"/>
+				<textFieldExpression><![CDATA[$P{note}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="664" width="555" height="20" uuid="337e8ac9-3361-4486-bdaa-96224fea2b94"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3Karnaval]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="686" width="555" height="20" uuid="f42059c5-7496-4f6d-93ca-d4991e749931"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="644" width="555" height="20" uuid="c22780f5-1c73-463a-9a6c-b2f3fb66240a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noteBottomsender}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

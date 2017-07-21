@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="notaTrx_cashncarry" pageWidth="555" pageHeight="790" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="95d769f4-b7c4-4066-b404-043a66499c7f">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="504"/>
+	<parameter name="trxDate" class="java.lang.String"/>
+	<parameter name="username" class="java.lang.String"/>
+	<parameter name="notaNumber" class="java.lang.String"/>
+	<parameter name="cardNumber" class="java.lang.String"/>
+	<parameter name="retailerName" class="java.lang.String"/>
+	<parameter name="retailerAddress" class="java.lang.String"/>
+	<parameter name="ownerName" class="java.lang.String"/>
+	<parameter name="ownerMSISDN" class="java.lang.String"/>
+	<parameter name="seMSISDN" class="java.lang.String"/>
+	<parameter name="trxMSISDN" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="itemsCnc" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="headerNote" class="java.lang.String"/>
+	<parameter name="noteCnc" class="java.lang.String"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="notecashncarry" class="java.lang.String"/>
+	<detail>
+		<band height="750" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="25" width="555" height="26" uuid="0d452da4-078b-445f-86ef-3cdc9c5311a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Nota Pengambilan Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="25" uuid="74016006-3658-4537-a688-cc8f156a9e80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3Karnaval ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="109" width="106" height="35" uuid="039b6798-44db-4b4c-991f-dc72faec95be"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Nota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="63" width="106" height="20" uuid="8a1133b6-3ff2-4e17-a78d-10cf85b3e0bb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="83" width="106" height="20" uuid="8d979e93-1fce-478b-b271-ad3c4ec6d945"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Kasir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="174" width="106" height="20" uuid="353dfb09-ebb0-4254-8b8c-4c68b8e14e81"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Owner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="214" width="106" height="20" uuid="4ff60f6b-bb29-4f5b-86bc-6fe9e56db788"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Retailer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="214" width="106" height="20" uuid="f35214b1-a79a-4eb3-97b0-8cafaeed9d02"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SE MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="174" width="106" height="20" uuid="e0123285-0cf4-454d-a86f-22bc836a3085"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Retailer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="154" width="106" height="20" uuid="5b992742-8a3b-4167-b2f1-b952a68ceb3b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor Kartu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="194" width="106" height="20" uuid="5c30fc83-bead-49e5-a5ff-6a0d8c9792d7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Owner MSISDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="194" width="106" height="20" uuid="99eb1d2b-e2d9-4457-8b8d-b24771cddada"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Trx MSISDN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="192" width="100" height="20" uuid="966caea1-7e74-4932-9fc6-7049ab07a8c1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ownerMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="174" width="100" height="20" uuid="492dd0b7-4c3f-4eac-bbfc-e26edcbb30aa"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{retailerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="194" width="100" height="20" uuid="6ae0a4f6-f5c5-437c-9b42-3b4017bed08e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trxMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="214" width="217" height="20" uuid="152100b4-e013-4b06-b224-ef886dd828c0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{retailerAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="212" width="100" height="20" uuid="66b161c4-0d58-4b54-a516-590bfcf8c2f2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{seMSISDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="154" width="100" height="20" uuid="17eead2e-c1f6-4820-baec-580d91bb4d97"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{cardNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="83" width="100" height="20" uuid="3fb4c77d-3618-4196-9a9c-490ca41b1ab5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="63" width="100" height="20" uuid="8df24da4-4e8e-4a05-929e-819521712100"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{trxDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="172" width="100" height="20" uuid="85005ffb-9b53-4534-980d-4f1cce2f19fb"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ownerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="109" width="141" height="35" uuid="93cab55f-3e45-49db-9e52-e813add8ba49"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{notaNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="244" width="555" height="20" uuid="323261f9-4529-479f-870d-dd79bd0c95c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pick Up]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="273" width="555" height="276" uuid="720628b1-dc5b-4948-b7f8-50fd89efa0f0"/>
+			</rectangle>
+			<subreport isUsingCache="false">
+				<reportElement x="0" y="273" width="555" height="276" uuid="63323aa3-f8d8-4695-be61-d41aba0acf12"/>
+				<subreportParameter name="items"/>
+				<dataSourceExpression><![CDATA[$P{itemsCnc}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "notaTrx_detailCnCa.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="0" y="560" width="555" height="15" uuid="e8608265-a3f6-4f51-882e-cb50801e89a2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headerNote}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="666" width="555" height="20" uuid="12b21a52-a0ad-42c5-bd07-e607caf46ab9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="686" width="555" height="20" uuid="2c21a0bb-33ae-40d1-ab82-2f01c6c6e4ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3Karnaval]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="706" width="555" height="20" uuid="d6e4ed99-13d9-4406-b57d-87cd0213da71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="575" width="555" height="91" uuid="d94a7c8a-79b6-4c54-87fc-85089420ec34"/>
+				<textFieldExpression><![CDATA[$P{notecashncarry}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
